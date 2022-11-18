@@ -14,6 +14,20 @@
   <button x-on:click="getData">Send get request</button>
   <p x-text="data"></p>
 </div>
+
+
+
+<div x-data="{
+    data: null,
+
+    getDriver() {
+        fetch('https://project-service-rgoeyvaerts.cloud.okteto.net/drivers')
+            .then((response) => response.json())
+            .then((json) => this.data = json);
+    }
+}" x-init="getDriver()">
+  <p x-text="data"></p>
+</div>
 </body>
 
 </html>
