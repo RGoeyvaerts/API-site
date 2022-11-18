@@ -14,7 +14,7 @@
             .then((json) => this.data = json);
             console.log(data);
     }
-}" x-init="getDriver()">
+}" x-init="getDriver">
   <button x-on:click="getDriver">Send get request</button>
   <p x-text="data[0].title"></p>
 </div>
