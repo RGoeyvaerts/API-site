@@ -6,18 +6,6 @@
 
 <body>
 <div x-data="{
-        data: null,
-        async getData() {
-            this.posts = await (await fetch('https://project-service-rgoeyvaerts.cloud.okteto.net/drivers')).json();
-        }
-    }">
-  <button x-on:click="getData">Send get request</button>
-  <p x-text="data"></p>
-</div>
-
-
-
-<div x-data="{
     data: null,
 
     getDriver() {
@@ -26,7 +14,8 @@
             .then((json) => this.data = json);
     }
 }" x-init="getDriver()">
-  <p x-text="data[0]"></p>
+  <button x-on:click="getData">Send get request</button>
+  <p x-text="data[0].title"></p>
 </div>
 </body>
 
