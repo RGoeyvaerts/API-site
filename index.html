@@ -12,6 +12,7 @@
         fetch('https://project-service-rgoeyvaerts.cloud.okteto.net/drivers')
             .then((response) => response.json())
             .then((json) => this.data = json);
+            console.log(data);
     }
 }" x-init="getDriver()">
   <button x-on:click="getDriver">Send get request</button>
