@@ -1,7 +1,10 @@
 <html>
 <style>
+
+  .align{
+    text-align: left;
+  }
   html {
-    background-color: whitesmoke;
     background-color: silver;
     background-image:
             url("https://live.staticflickr.com/65535/48724361692_87ccc0aef4_b.jpg");
@@ -10,12 +13,14 @@
             background-size: cover;
   }
   body {
-    max-width: 800px;
-    color: #95D600;
+    max-width: 500px;
+    color: yellow;
 
     margin: auto;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
+    max-height: 250px;
+
 
 
 
@@ -40,11 +45,11 @@
 
   async getDriver() {
             this.data = await (await fetch('https://project-service-rgoeyvaerts.cloud.okteto.net/drivers')).json();
-            console.log(data);
+
         }
-}" x-init="getDriver">
+}" x-init="getDriver" class="align">
   <button x-on:click="getDriver">Get random driver</button>
-  Data returned: <strong x-text="data[0]">Placeholder</strong>
+  <h2>Data returned: <strong x-text="data[0]">Placeholder</strong></h2>
 
 </div>
 
@@ -53,11 +58,11 @@
 
   async getDriver() {
             this.data = await (await fetch('https://project-service-rgoeyvaerts.cloud.okteto.net/teams')).json();
-            console.log(data);
+
         }
-}" x-init="getDriver">
+}" x-init="getDriver" class="align">
   <button x-on:click="getDriver">Get random team</button>
-  Data returned: <strong x-text="data[0]">Placeholder</strong>
+ <h2> Data returned: <strong x-text="data[0]">Placeholder</strong></h2>
 
 </div>
 </body>
