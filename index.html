@@ -1,10 +1,40 @@
 <html>
+<style>
+  html {
+    background-color: whitesmoke;
+    background-color: silver;
+    background-image:
+            url("https://live.staticflickr.com/65535/48724361692_87ccc0aef4_b.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+  }
+  body {
+    max-width: 800px;
+    color: #95D600;
+
+    margin: auto;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+
+
+
+  }
+
+  button{
+    background-color: black;
+    color:#95D600;
+  }
+</style>
 
 <head>
   <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
 
 <body>
+<h1>Rallycross API</h1>
+<!--<img src="https://images.pexels.com/photos/9667584/pexels-photo-9667584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="audi s1"-->
+<!--     width="600" height="450">-->
 <div x-data="{
     data: null,
 
@@ -13,7 +43,7 @@
             console.log(data);
         }
 }" x-init="getDriver">
-  <button x-on:click="getDriver">Send get request</button>
+  <button x-on:click="getDriver">Get random driver</button>
   Data returned: <strong x-text="data[0]">Placeholder</strong>
 
 </div>
@@ -26,7 +56,7 @@
             console.log(data);
         }
 }" x-init="getDriver">
-  <button x-on:click="getDriver">Send get request</button>
+  <button x-on:click="getDriver">Get random team</button>
   Data returned: <strong x-text="data[0]">Placeholder</strong>
 
 </div>
