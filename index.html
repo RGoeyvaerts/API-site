@@ -1,9 +1,26 @@
 <html>
 <style>
+    .form {
+        width: 500px;
+        height: 300px;
+        display: grid;
+        place-content: center;
 
-  .align{
-    text-align: left;
-  }
+        /* Add a transparency to the background
+           using rgba value */
+        background: rgba(255, 255, 255, 0.1);
+
+        /* Add a transparency to shadow */
+        box-shadow: 0 26px 42px rgba(0, 0, 0, 0.4);
+    }
+    button{
+        background-color: black;
+        color:#95D600;
+        opacity: 1;
+    }
+    h1,h2{
+        opacity: 1;
+    }
   html {
     background-color: silver;
     background-image:
@@ -24,19 +41,20 @@
 
 
 
+
   }
 
-  button{
-    background-color: black;
-    color:#95D600;
-  }
+
+
+
 </style>
 
 <head>
   <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
 
-<body>
+
+<body class="form">
 <h1>Rallycross API</h1>
 <!--<img src="https://images.pexels.com/photos/9667584/pexels-photo-9667584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="audi s1"-->
 <!--     width="600" height="450">-->
@@ -49,7 +67,7 @@
         }
 }" x-init="getDriver" class="align">
   <button x-on:click="getDriver">Get random driver</button>
-  <h2>Data returned: <strong x-text="data[0]">Placeholder</strong></h2>
+  <h2>Random driver: <strong x-text="data[0]">Placeholder</strong></h2>
 
 </div>
 
@@ -62,7 +80,7 @@
         }
 }" x-init="getDriver" class="align">
   <button x-on:click="getDriver">Get random team</button>
- <h2> Data returned: <strong x-text="data[0]">Placeholder</strong></h2>
+ <h2> random team: <strong x-text="data[0]">Placeholder</strong></h2>
 
 </div>
 </body>
