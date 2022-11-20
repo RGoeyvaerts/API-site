@@ -72,16 +72,18 @@
 
 <div x-data="{
     data: null,
-  async getDriver() {
-            this.data = await (await fetch('https://project-service-rgoeyvaerts.cloud.okteto.net/teams')).json();
+
+  async getDriver2() {
+            this.data = await (await fetch('https://project-service-rgoeyvaerts.cloud.okteto.net/drivers2')).json();
+
         }
-}" x-init="getDriver" class="align">
-  <button x-on:click="getDriver">Get random team</button>
- <h2> random team: <strong x-text="data[0]">Placeholder</strong></h2>
+}" x-init="getDriver2" class="align">
+  <button x-on:click="getDriver2">Get random team</button>
+ <h2> random team: <strong x-text="data">Placeholder</strong></h2>
 
 </div>
+
 </body>
 
 </html>
 
-</html>
