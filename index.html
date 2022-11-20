@@ -1,6 +1,7 @@
 <html>
 <style>
     .form {
+
         width: 700px;
         height: 500px;
         display: grid;
@@ -36,7 +37,7 @@
     margin: auto;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    max-height: 250px;
+
 
 
 
@@ -56,8 +57,7 @@
 
 <body class="form">
 <h1>Rallycross API</h1>
-<!--<img src="https://images.pexels.com/photos/9667584/pexels-photo-9667584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="audi s1"-->
-<!--     width="600" height="450">-->
+
 <div x-data="{
     data: null,
 
@@ -80,7 +80,7 @@
         }
 }" x-init="getDriver2" class="align">
   <button x-on:click="getDriver2">Get random team</button>
- <h2> random team: <strong x-text="data[0]">Placeholder</strong></h2>
+ <h2> random team: <strong x-text="data">Placeholder</strong></h2>
 
 </div>
 
