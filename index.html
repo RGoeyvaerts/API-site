@@ -57,8 +57,7 @@
 
 <body class="form">
 <h1>Rallycross API</h1>
-<!--<img src="https://images.pexels.com/photos/9667584/pexels-photo-9667584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="audi s1"-->
-<!--     width="600" height="450">-->
+
 <div x-data="{
     data: null,
   async getDriver() {
@@ -82,6 +81,20 @@
  <h2> random team: <strong x-text="data">Placeholder</strong></h2>
 
 </div>
+
+<div x-data="{
+    data: null,
+
+  async getDriver2() {
+            this.data = await (await fetch('https://project-service-rgoeyvaerts.cloud.okteto.net/teams')).json();
+
+        }
+}" x-init="getTeam" class="align">
+    <button x-on:click="getDriver2">Get random team</button>
+    <h2> random team: <strong x-text="data[0]">Placeholder</strong></h2>
+
+</div>
+
 
 </body>
 
